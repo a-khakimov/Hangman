@@ -9,6 +9,7 @@ lazy val root = (project in file("."))
       semanticdbVersion := scalafixSemanticdb.revision,
       scalacOptions ++= Seq(
         "-Ywarn-unused",
+        "-Xfatal-warnings",
         "-deprecation"
       )
     )),
