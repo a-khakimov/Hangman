@@ -22,6 +22,11 @@ coverage:
   script:
     - sbt coverageReport
 
+assembly:
+  script:
+    - sbt "clean; set test in assembly := {}; assembly"
+
 stages:
   - test
   - coverage
+  - assembly
