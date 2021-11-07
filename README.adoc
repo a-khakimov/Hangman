@@ -1,0 +1,34 @@
+= Hangman
+
+== Сборка и запуск
+
+Для установки необходимо установить sbt и scala
+
+=== Сборка
+
+```
+$ sbt "clean; set test in assembly := {}; assembly"
+```
+
+=== Запуск
+
+```
+$ scala target/scala-2.13/Hangman-assembly-0.1.0-SNAPSHOT.jar
+```
+
+== Запуск тестов
+
+```bash
+$ sbt test
+```
+
+== Измерение покрытия кода тестами
+
+```bash
+$ sbt coverageReport
+```
+
+По окончанию будет сгенерирован отчет в директории:
+```
+target/scala-2.13/scoverage-report/
+```
